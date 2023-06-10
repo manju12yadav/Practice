@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mock.ICCt20">
+      <class name="com.advanced.AutomateFlipkart">
         <methods>
-          <include name="icct20"/>
+          <include name="phonePrices"/>
         </methods>
-      </class> <!-- com.mock.ICCt20 -->
+      </class> <!-- com.advanced.AutomateFlipkart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

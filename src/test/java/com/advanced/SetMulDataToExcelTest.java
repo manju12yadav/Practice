@@ -18,7 +18,7 @@ public class SetMulDataToExcelTest
 		
 		  Workbook wb = WorkbookFactory.create(fis); 
 //		  	Sheet sh = wb.createSheet("My List");
-		  	Sheet sh = wb.getSheet("My List");
+		  	Sheet sh = wb.createSheet("My list");
 		
 		Object mydata[][]= { 	{"Id","Name","Desig"},
 								{"341","Siri","Developer "},

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-06-03T16:07:48 IST" name="Default suite" finished-at="2023-06-03T16:07:48 IST" duration-ms="74">
+  <suite started-at="2023-06-08T19:15:27 IST" name="Default suite" finished-at="2023-06-08T19:16:20 IST" duration-ms="52598">
     <groups>
     </groups>
-    <test started-at="2023-06-03T16:07:48 IST" name="Default test" finished-at="2023-06-03T16:07:48 IST" duration-ms="74">
-      <class name="com.logicalPrgms.PrimeNum">
-        <test-method signature="range()[pri:0, instance:com.logicalPrgms.PrimeNum@fba92d3]" started-at="2023-06-03T16:07:48 IST" name="range" finished-at="2023-06-03T16:07:48 IST" duration-ms="19" status="PASS">
+    <test started-at="2023-06-08T19:15:27 IST" name="Default test" finished-at="2023-06-08T19:16:20 IST" duration-ms="52598">
+      <class name="com.advanced.AutomateFlipkart">
+        <test-method signature="phonePrices()[pri:0, instance:com.advanced.AutomateFlipkart@57d7f8ca]" started-at="2023-06-08T19:15:27 IST" name="phonePrices" finished-at="2023-06-08T19:16:20 IST" duration-ms="52531" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- range -->
-      </class> <!-- com.logicalPrgms.PrimeNum -->
+        </test-method> <!-- phonePrices -->
+      </class> <!-- com.advanced.AutomateFlipkart -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

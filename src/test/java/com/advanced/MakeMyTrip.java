@@ -9,13 +9,16 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-public class AutomateMakeMyTrip 
+public class MakeMyTrip 
 {
 
 	public static void main(String[] args) throws Throwable 
@@ -24,20 +27,23 @@ public class AutomateMakeMyTrip
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		JavascriptExecutor js=(JavascriptExecutor) driver;
 		driver.get("https://www.makemytrip.com/");
-//		Actions act = new Actions(driver);
-//		act.click().perform();
-		driver.switchTo().defaultContent();
-		driver.findElement(By.xpath("//a[@class='close']")).click();
+		Actions act = new Actions(driver);
+		WebDriverWait wait=new WebDriverWait(driver, 10);
+		WebElement frame = driver.findElement(By.xpath("//iframe[@title='notification-frame-173061603']"));
+		driver.switchTo().frame(frame);
+		
+		WebElement popup = driver.findElement(By.xpath("//a[@id='webklipper-publisher-widget-container-notification-close-div']"));
+		wait.until(ExpectedConditions.visibilityOf(popup));
+		js.executeScript("arguments[0].click()", popup);
+//		popup.click();
 		WebElement from = driver.findElement(By.xpath("//span[text()='From']"));
 		from.click();
 		
 		
 		driver.findElement(By.xpath("//input[@placeholder='From']")).sendKeys("blr");
 		List<WebElement> benglrList = driver.findElements(By.xpath("//p[@class=\"font14 appendBottom5 blackText\"]"));
-		for (WebElement lst : benglrList) {
-			System.out.println(lst.getText());
-		}
 		String expexted = "Bengaluru, India";
 		for (WebElement lst : benglrList) {
 			if (lst.getText().equals(expexted)) {
@@ -88,7 +94,7 @@ public class AutomateMakeMyTrip
 		
 		FileInputStream fis=new FileInputStream("./src/test/resources/Output.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
-		Sheet sh = wb.createSheet("makemytrip12");
+		Sheet sh = wb.createSheet("makemytrip15");
 		int s = flights.size();
 			for(int i=0;i<s;i++)
 			{

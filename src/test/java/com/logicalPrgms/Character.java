@@ -36,11 +36,11 @@ public class Character{
     {
         String s1="Hi";
         String s2="World";
-        int len=s1.length();
-        s1=s1+s2;
-        s2=s1.substring(0,len);
+        int len=s1.length();//2
+        s1=s1+s2;//hiworld
+        s2=s1.substring(0,len);//hi
         System.out.println("S2-"+s2);
-        s1=s1.substring(len,s1.length());
+        s1=s1.substring(len,s1.length());//world
         System.out.println("S1-"+s1);
         
     }

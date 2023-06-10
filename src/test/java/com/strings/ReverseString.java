@@ -5,12 +5,12 @@ public class ReverseString
 
 	public static void main(String[] args) 
 	{
-//		//Normal way-1
-//		String s="software";
-//		for (int i =s.length()-1 ; i>=0 ; i--) 
-//		{
-//			System.out.print(s.charAt(i)+"");
-//		}
+		//Normal way-1
+		String s="software";
+		for (int i =s.length()-1 ; i>=0 ; i--) 
+		{
+			System.out.print(s.charAt(i)+"");
+		}
 		
 		
 		//Using 3rd Variable-2
@@ -41,6 +41,12 @@ public class ReverseString
 //		for(int i=count-1;i>=0;i--)
 //		{
 //			System.out.println(str[i]);
+//		}
+//		int i=s.length()-1;
+//		while(i>=0)
+//		{
+//			System.out.println(str[i]);
+//			i--;
 //		}
 		
 		//Using String Builder
