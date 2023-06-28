@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.advanced.AutomateFlipkart">
+      <class name="com.interviewChallenges.TyChallenges51to60">
         <methods>
-          <include name="phonePrices"/>
+          <include name="p51"/>
         </methods>
-      </class> <!-- com.advanced.AutomateFlipkart -->
+      </class> <!-- com.interviewChallenges.TyChallenges51to60 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

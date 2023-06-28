@@ -1,4 +1,4 @@
-package com.advanced;
+package com.automate;
 
 import java.io.IOException;
 import java.util.List;
@@ -9,6 +9,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.Test;
 
 
@@ -21,19 +22,22 @@ public class MredBus {
 	{
 
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver=new ChromeDriver();
+		ChromeOptions options=new ChromeOptions();
+		options.addArguments("--disable-notifications");
+		WebDriver driver=new ChromeDriver(options);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		driver.get("https://www.redbus.in/");
+		driver.get("https://www.redbus.in");
 		driver.findElement(By.id("src")).sendKeys("bangalore");
-		driver.findElement(By.xpath("//li[.='Madiwala, Bangalore']")).click();
+		driver.findElement(By.xpath("//text[.='Madiwala']")).click();
 		driver.findElement(By.id("dest")).sendKeys("Chennai");
-		driver.findElement(By.xpath("//li[@data-id='123']")).click();
+		driver.findElement(By.xpath("//text[.='Koyambedu']")).click();
 		driver.findElement(By.id("onward_cal")).click();
-		driver.findElement(By.xpath("//button[.='>']")).click();
-		driver.findElement(By.xpath("//td[.='25']")).click();
-		driver.findElement(By.id("search_btn")).click();
+//		driver.findElement(By.xpath("//button[.='>']")).click();
+		driver.findElement(By.xpath("//*[name()='svg']")).click();
+		driver.findElement(By.xpath("//span[.='25']")).click();
+		driver.findElement(By.id("search_button")).click();
 		Thread.sleep(3000);
 //		driver.findElement(By.xpath("//i[@class='icon-close coach-close']")).click();
 		

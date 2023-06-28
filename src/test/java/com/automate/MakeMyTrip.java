@@ -1,4 +1,4 @@
-package com.advanced;
+package com.automate;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

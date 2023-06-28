@@ -21,7 +21,7 @@ public class GridPractice
 		WebDriver driver=null;
 		if(executeMode.equals("remote")) 
 		{
-		URL url=new URL("http://192.168.1.101:4444/wd/hub");
+		URL url=new URL("http://192.168.114.215:4444/wd/hub");
 		DesiredCapabilities cap=new DesiredCapabilities();
 		cap.setBrowserName("chrome");
 		cap.setPlatform(Platform.WINDOWS);
@@ -33,7 +33,7 @@ public class GridPractice
 			driver=new ChromeDriver();
 		}
 		driver.manage().window().maximize();
-		driver.get("https://google.com");
+		driver.get("https://facebook.com");
 		driver.quit();
 	}
 }

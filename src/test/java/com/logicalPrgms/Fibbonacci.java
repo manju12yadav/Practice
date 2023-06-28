@@ -48,12 +48,5 @@ public class Fibbonacci
         }
 	}
     
-    @Test
-    public void chrome()
-    {
-    	WebDriverManager.chromedriver().setup();
-    	WebDriver driver=new ChromeDriver();
-    	driver.getTitle();
-    }
 
 }
